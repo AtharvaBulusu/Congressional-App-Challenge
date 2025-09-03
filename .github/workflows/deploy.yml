@@ -1,17 +1,7 @@
-name: Deploy App
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Echo secret
-        run: echo "Secret is ${{ secrets.OPENAI_KEY }}"
-
+- name: Create .env file
+  run: |
+    echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+- name: Create .env file
+  run: |
+    echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+    echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
