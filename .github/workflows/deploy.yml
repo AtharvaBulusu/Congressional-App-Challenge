@@ -1,7 +1,7 @@
 - name: Create .env file
   run: |
-    echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+    echo "OPENAI_KEY=${{ secrets.OPENAI_KEY }}" >> .env
 - name: Create .env file
   run: |
-    echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+    echo "OPENAI_KEY=${{ secrets.OPENAI_KEY }}" >> .env
     echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
